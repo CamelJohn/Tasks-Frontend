@@ -1,9 +1,9 @@
-@import '../styles/components/link.scss';
-@import '../styles/utils.scss';
-@import '../styles/sizes.scss';
+@import '../styles/components/link';
+@import '../styles/utils';
+@import '../styles/sizes';
 
 header {
-    height: 4em;
+    height: $header-height;
     display: flex;
     align-items: center;
     justify-content: space-between;
