@@ -1,6 +1,6 @@
-@import 'styles/sizes';
-@import 'styles/utils';
-@import 'styles/components/link';
+@import '/src/styles/_sizes';
+@import '/src/styles/_utils';
+@import '/src/styles/components/link';
 
 .container {
     display: flex;
