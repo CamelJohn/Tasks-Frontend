@@ -1,0 +1,8 @@
+.link {
+  color: dodgerblue;
+  cursor: pointer;
+
+  &:hover {
+    color: lightgray;
+  }
+}

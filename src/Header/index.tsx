@@ -8,9 +8,9 @@ const Header: React.FC<{}> = () => {
             <div>Logo</div>
         </div>
         <div className={css.actions}>
-            <div>Profile</div>
-            <div>Login/Signup</div>
-            <div>Logout</div>
+            <div className={css.link}>Profile</div>
+            <div className={css.link}>Login/Signup</div>
+            <div className={css.link}>Logout</div>
         </div>
     </header>
 }
