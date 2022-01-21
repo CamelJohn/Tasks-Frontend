@@ -1,7 +1,7 @@
 import './App.scss';
-import Header from './Header';
-import MainLayout from './MainLayout';
-import Sidenav from './Sidenav';
+import Header from './Components/Header';
+import MainLayout from './Components/MainLayout';
+import Sidenav from './Components/Sidenav';
 
 export default function App() {
   return (
