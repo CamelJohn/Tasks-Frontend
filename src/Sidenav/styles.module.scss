@@ -1,0 +1,18 @@
+@import '../styles/sizes.scss';
+@import '../styles/utils.scss';
+@import '../styles/components/link.scss';
+
+.container {
+    display: flex;
+    height: calc(100vh - 4em - 2 * $small-padding);
+    width: calc(15vw - 2 * $small-padding);
+    padding: $small-padding;
+    box-shadow: $box-shadow;
+
+    .links {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        gap: $small-gap;
+    }
+}

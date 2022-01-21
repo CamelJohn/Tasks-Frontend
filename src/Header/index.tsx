@@ -1,4 +1,3 @@
-import React from 'react';
 import css from './styles.module.scss';
 
 const Header: React.FC<{}> = () => {
@@ -9,6 +8,7 @@ const Header: React.FC<{}> = () => {
         </div>
         <div className={css.actions}>
             <div className={css.link}>Profile</div>
+            <div className={css.link}>User Management</div>
             <div className={css.link}>Login/Signup</div>
             <div className={css.link}>Logout</div>
         </div>
