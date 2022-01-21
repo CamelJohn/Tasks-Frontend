@@ -6,9 +6,9 @@ const Welcome: React.FC<{}> = () => {
       <h1>Welcome !</h1>
       <div className={css.seperator} />
       <div className={css.copy}>
-        "Brand Name" is your one stop shop for managing every-day tasks. Feel
-        like saving peper, time & the environment ? sick of forgetting things ?
-        Get your life back on track today!
+        Discomcobulator is your one stop shop for managing every-day tasks.
+        Feel like saving peper, time & the environment ? sick of forgetting
+        things ? Get your life back on track today!
       </div>
     </div>
   );

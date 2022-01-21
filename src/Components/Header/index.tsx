@@ -1,11 +1,12 @@
 import { Link } from 'react-router-dom';
+import Logo from '../Logo';
 import css from './styles.module.scss';
 
 const Header: React.FC<{}> = () => {
     return <header className={css.header}>
         <nav className={css.navigation}>
             <div>Burger Button</div>
-            <div>Logo</div>
+            <Logo logo='Discomcobulaotr' />
         </nav>
         <nav className={css.actions}>
             <Link to="/" className={css.link}>Profile</Link>
