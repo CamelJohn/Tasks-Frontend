@@ -1,0 +1,13 @@
+@import '../color';
+
+.navlink {
+    height: 3.5em;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+        background-color: $darker;
+    }
+}

@@ -1,9 +1,11 @@
+@import '../color';
+
 .link {
-  color: dodgerblue;
+  color: $mild;
   cursor: pointer;
   text-decoration: none;
 
   &:hover {
-    color: lightgray;
+    color: $darker;
   }
 }

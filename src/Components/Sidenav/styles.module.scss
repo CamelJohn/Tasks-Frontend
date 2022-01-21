@@ -1,18 +1,20 @@
 @import '/src/styles/_sizes';
 @import '/src/styles/_utils';
-@import '/src/styles/components/link';
+@import '/src/styles/components/navlink';
 
 .container {
     display: flex;
-    height: calc(100vh - $header-height - 2 * $small-padding);
-    width: calc($sidenav-width - 2 * $small-padding);
-    padding: $small-padding;
+    justify-content: center;
+    height: calc(100vh - $header-height);
+    width: calc($sidenav-width);
     box-shadow: $box-shadow;
 
     .links {
         display: flex;
         flex-direction: column;
         list-style: none;
-        gap: $small-gap;
+        width: 100%;
+        padding: 0;
+        margin: 0;
     }
 }

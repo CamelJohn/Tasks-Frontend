@@ -1,6 +1,7 @@
 @import '/src/styles/components/link';
 @import '/src/styles/utils';
 @import '/src/styles/sizes';
+@import '/src/styles/color';
 
 header {
     height: $header-height;
@@ -9,6 +10,8 @@ header {
     justify-content: space-between;
     padding: 0 $small-padding;
     box-shadow: $box-shadow;
+    background-color: $base;
+    color: $violet;
 
     .navigation {
         display: flex;
