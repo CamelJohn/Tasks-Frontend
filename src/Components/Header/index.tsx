@@ -1,17 +1,18 @@
+import { Link } from 'react-router-dom';
 import css from './styles.module.scss';
 
 const Header: React.FC<{}> = () => {
     return <header className={css.header}>
-        <div className={css.navigation}>
+        <nav className={css.navigation}>
             <div>Burger Button</div>
             <div>Logo</div>
-        </div>
-        <div className={css.actions}>
-            <div className={css.link}>Profile</div>
-            <div className={css.link}>User Management</div>
-            <div className={css.link}>Login/Signup</div>
-            <div className={css.link}>Logout</div>
-        </div>
+        </nav>
+        <nav className={css.actions}>
+            <Link to="/" className={css.link}>Profile</Link>
+            <Link to="/" className={css.link}>User Management</Link>
+            <Link to="/" className={css.link}>Login/Signup</Link>
+            <Link to="/" className={css.link}>Logout</Link>
+        </nav>
     </header>
 }
 
