@@ -1,0 +1,27 @@
+header {
+    height: 4em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2em;
+    box-shadow: 0px 3px 6px lightgray;
+
+    .navigation {
+        display: flex;
+        gap: 2em;
+    }
+
+    .actions {
+        display: flex;
+        gap: 4em;
+
+        div {
+            color: dodgerblue;
+            cursor: pointer;
+
+            &:hover {
+                color: lightgray;
+            }
+        }
+    }
+}
