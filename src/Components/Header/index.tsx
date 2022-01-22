@@ -5,8 +5,8 @@ import css from './styles.module.scss';
 const Header: React.FC<{}> = () => {
     return <header className={css.header}>
         <nav className={css.navigation}>
-            <div>Burger Button</div>
-            <Logo logo='Discomcobulaotr' />
+            <img src="/src/assets/burger-svgrepo-com.svg" alt='burger menu icon' />
+            <Logo logo='Discombobulator' />
         </nav>
         <nav className={css.actions}>
             <Link to="/" className={css.link}>Profile</Link>
