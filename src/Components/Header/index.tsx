@@ -1,13 +1,9 @@
 import { Link } from 'react-router-dom';
 import Logo from '../Logo';
 import css from './styles.module.scss';
+import { SidenavToggleProps } from '../sidenav-toggle';
 
-type HeaderProps = {
-    setIsSidenavOpen: React.Dispatch<React.SetStateAction<boolean>>;
-    isSidenavOpen: boolean;
-}
-
-const Header: React.FC<HeaderProps> = ({ setIsSidenavOpen, isSidenavOpen }) => {
+const Header: React.FC<SidenavToggleProps> = ({ setIsSidenavOpen, isSidenavOpen }) => {
 
     return <header className={css.header}>
         <nav className={css.navigation}>

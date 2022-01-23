@@ -14,7 +14,7 @@ export default function App() {
     <div className="App">
       <Header isSidenavOpen={isSidenavOpen} setIsSidenavOpen={setIsSidenavOpen}/>
       <MainLayout>
-        <Sidenav isSidenavOpen={isSidenavOpen} />
+        <Sidenav isSidenavOpen={isSidenavOpen} setIsSidenavOpen={setIsSidenavOpen} />
         <MainContent>
           <MainRouter />
         </MainContent>
