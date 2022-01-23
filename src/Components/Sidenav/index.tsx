@@ -24,8 +24,8 @@ const Sidenav: React.FC<SidenavToggleProps> = ({ isSidenavOpen, setIsSidenavOpen
     return <nav className={containerClasses} ref={sidenavRef}>
         <ul className={css.links}>
             <Link to="/tasks" className={css.navlink}>Tasks</Link>
-            <li className={css.navlink}>Categories</li>
-            <li className={css.navlink}>Dashboard</li>
+            <Link to="/categories" className={css.navlink}>Categories</Link>
+            <Link to="/dashboard" className={css.navlink}>Dashboard</Link>
         </ul>
     </nav>
 }
