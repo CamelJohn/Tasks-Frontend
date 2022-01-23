@@ -1,5 +1,4 @@
 import './App.scss';
-import React from 'react';
 
 import Header from './Components/Header';
 import MainContent from './Components/MainContent';
@@ -8,13 +7,11 @@ import Sidenav from './Components/Sidenav';
 import MainRouter from './Components/Router/router';
 
 export default function App() {
-  const [isSidenavOpen, setIsSidenavOpen] = React.useState(false);
-
   return (
     <div className="App">
-      <Header isSidenavOpen={isSidenavOpen} setIsSidenavOpen={setIsSidenavOpen}/>
+      <Header/>
       <MainLayout>
-        <Sidenav isSidenavOpen={isSidenavOpen} setIsSidenavOpen={setIsSidenavOpen} />
+        <Sidenav />
         <MainContent>
           <MainRouter />
         </MainContent>

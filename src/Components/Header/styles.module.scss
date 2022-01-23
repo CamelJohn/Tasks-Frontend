@@ -4,40 +4,41 @@
 @import '/src/styles/color';
 
 header {
+  display: flex;
+  align-items: center;
+  gap: $small-gap;
+  padding: 0 $small-padding;
+  box-shadow: $box-shadow;
+  background-color: $base;
+  color: $violet;
+  cursor: pointer;
+
+  img {
+    width: 45px;
+    cursor: pointer;
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(289deg)
+      brightness(105%) contrast(102%);
+
+    &:hover {
+      filter: invert(0%) sepia(0%) saturate(7483%) hue-rotate(71deg)
+        brightness(104%) contrast(104%);
+    }
+  }
+
+  .navigation {
     height: $header-height;
     display: flex;
+    width: 100%;
     align-items: center;
     justify-content: space-between;
-    padding: 0 $small-padding;
-    box-shadow: $box-shadow;
-    background-color: $base;
-    color: $violet;
 
-    .navigation {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: $small-gap;
-
-        .logo {
-            font-size: 2em;
-        }
-
-        img {
-            width: 45px;
-            cursor: pointer;
-            filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(289deg) brightness(105%) contrast(102%);
-
-            &:hover {
-                filter: invert(0%) sepia(0%) saturate(7483%) hue-rotate(71deg) brightness(104%) contrast(104%);
-
-
-            }
-        }
+    .logo {
+      font-size: 2em;
     }
 
     .actions {
-        display: flex;
-        gap: $medium-gap;
+      display: flex;
+      gap: $medium-gap;
     }
+  }
 }

@@ -6,15 +6,17 @@
   display: flex;
   justify-content: center;
   height: calc(100vh - $header-height);
-  width: $sidenav-width;
+  // width: $sidenav-width;
   box-shadow: $box-shadow;
 
   &.closed {
+    width: 0px;
     transform: translateX(-1 * $sidenav-width);
     transition: ease-out $sidenav-animation-duration;
   }
   
   &.open {
+    width: $sidenav-width;
     transform: translateX(1px);
     transition: $sidenav-animation-duration ease-in;
   }

@@ -1,27 +1,24 @@
 import React from 'react';
-import useClickedOutside from '../../hooks/useClickedOutside';
 import css from './styles.module.scss';
-import { SidenavToggleProps } from '../sidenav-toggle';
 import { Link } from 'react-router-dom';
+import SidenavService from '../../services/sideanv.service';
+import Styles from '../../services/style.service';
 
 function shouldOpenSidenav(state: boolean) {
     return state ? 'open' : 'closed';
 }
 
-function concatenatedStyles(styles: string[]) {
-    return [...styles].join(' ');
-}
-
-const Sidenav: React.FC<SidenavToggleProps> = ({ isSidenavOpen, setIsSidenavOpen }) => {
-    const sidenavRef = React.useRef(null);
-    const containerClasses = concatenatedStyles([css.container, css[shouldOpenSidenav(isSidenavOpen)]]);
-    const clickedOutside = useClickedOutside(sidenavRef);
+const Sidenav: React.FC<{}> = () => {
+    const [isOpen, setIsOpen] = React.useState(false);
+    const containerClasses = Styles.concatenatedStyles([css.container, css[shouldOpenSidenav(isOpen)]]);
 
     React.useEffect(() => {
-        setIsSidenavOpen(prev => !clickedOutside && prev);
-    }, [clickedOutside]);
+        const sidenavStateSubscription = SidenavService.state.subscribe(state => setIsOpen(state));
+
+        return () => sidenavStateSubscription.unsubscribe();
+    }, []);
     
-    return <nav className={containerClasses} ref={sidenavRef}>
+    return <nav className={containerClasses}>
         <ul className={css.links}>
             <Link to="/tasks" className={css.navlink}>Tasks</Link>
             <Link to="/categories" className={css.navlink}>Categories</Link>
