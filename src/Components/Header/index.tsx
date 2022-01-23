@@ -2,10 +2,16 @@ import { Link } from 'react-router-dom';
 import Logo from '../Logo';
 import css from './styles.module.scss';
 
-const Header: React.FC<{}> = () => {
+type HeaderProps = {
+    setIsSidenavOpen: React.Dispatch<React.SetStateAction<boolean>>;
+    isSidenavOpen: boolean;
+}
+
+const Header: React.FC<HeaderProps> = ({ setIsSidenavOpen, isSidenavOpen }) => {
+
     return <header className={css.header}>
         <nav className={css.navigation}>
-            <img src="/src/assets/burger-svgrepo-com.svg" alt='burger menu icon' />
+            <img src="/src/assets/burger-svgrepo-com.svg" alt='burger menu icon' onClick={() => setIsSidenavOpen(!isSidenavOpen)} />
             <Logo logo='Discombobulator' />
         </nav>
         <nav className={css.actions}>

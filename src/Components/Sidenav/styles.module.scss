@@ -3,18 +3,28 @@
 @import '/src/styles/components/navlink';
 
 .container {
-    display: flex;
-    justify-content: center;
-    height: calc(100vh - $header-height);
-    width: calc($sidenav-width);
-    box-shadow: $box-shadow;
+  display: flex;
+  justify-content: center;
+  height: calc(100vh - $header-height);
+  width: $sidenav-width;
+  box-shadow: $box-shadow;
 
-    .links {
-        display: flex;
-        flex-direction: column;
-        list-style: none;
-        width: 100%;
-        padding: 0;
-        margin: 0;
-    }
+  &.closed {
+    transform: translateX(-1 * $sidenav-width);
+    transition: ease-out $sidenav-animation-duration;
+  }
+  
+  &.open {
+    transform: translateX(1px);
+    transition: $sidenav-animation-duration ease-in;
+  }
+  
+  .links {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
 }
