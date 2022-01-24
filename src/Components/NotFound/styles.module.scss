@@ -1,0 +1,31 @@
+@import '/src/styles/components/seperator';
+@import '/src/styles/sizes';
+@import '/src/styles/utils';
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - $header-height);
+
+    .wrapper {
+        display: flex;
+        justify-content: center;
+        height: 5em;
+        gap: $small-gap;
+        
+        .title, .errorCode {
+            font-size: 5em;
+            font-weight: bold;
+        }
+    
+        .content {
+            font-size: 2em;
+        }
+    
+        .verticalSeperator {
+            width: 2px;
+            background-color: lightgray;
+        }
+    }
+}

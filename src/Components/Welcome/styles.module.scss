@@ -1,4 +1,5 @@
 @import '/src/styles/sizes';
+@import '/src/styles/components/seperator';
 
 .container {
     display: flex;
@@ -13,14 +14,6 @@
         font-size: 5em;
         padding: 0;
         margin: 0;
-    }
-
-    .seperator {
-        width: 75%;
-        height: 1px;
-        background-color: lightgray;
-        position: relative;
-
     }
 
     .copy {

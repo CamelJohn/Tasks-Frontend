@@ -1,0 +1,9 @@
+@import '/src/styles/sizes';
+
+.open {
+    width: calc(100vw - $sidenav-width);
+}
+
+.closed {
+    width: 100vw;
+}

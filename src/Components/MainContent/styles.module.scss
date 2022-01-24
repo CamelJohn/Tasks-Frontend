@@ -1,15 +1,8 @@
 @import '/src/styles/_sizes';
+@import '/src/styles/components/sidenav';
 
 .container {
     padding: 0;
     margin: 0;
     height: calc(100vh - $header-height);
-
-    &.open {
-        width: calc(100vw - $sidenav-width);
-    }
-
-    &.closed {
-        width: 100vw;
-    }
 }
